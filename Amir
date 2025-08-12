@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وب‌سایت حرفه‌ای من</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Tahoma', sans-serif;
+            direction: rtl;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        /* هدر با بک‌گراند */
+        header {
+            position: relative;
+            background: url('https://picsum.photos/1600/900?blur=3') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        header .content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1s ease;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        /* منو */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #003f7f;
+        }
+        /* بخش‌ها */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+            animation: fadeIn 1s ease;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        /* فرم تماس */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+        }
+        form button {
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        /* شبکه اجتماعی */
+        .social {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .social a {
+            margin: 0 8px;
+            color: #007BFF;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social a:hover {
+            color: #0056b3;
+        }
+        /* فوتر */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        /* انیمیشن‌ها */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes fadeInDown {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="content">
+            <h1>سایت حرفه‌ای من</h1>
+            <p>طراحی مدرن، واکنش‌گرا و زیبا</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">درباره من</a>
+        <a href="#services">خدمات</a>
+        <a href="#contact">تماس</a>
+    </nav>
+
+    <section id="about">
+        <div class="card">
+            <h2>درباره من</h2>
+            <p>سلام! من یک توسعه‌دهنده وب هستم که با HTML، CSS و JavaScript وب‌سایت‌های مدرن می‌سازم. این نمونه برای معرفی پروژه‌های شخصی و حرفه‌ای ساخته شده است.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="card">
+            <h2>خدمات</h2>
+            <ul>
+                <li>طراحی وب‌سایت واکنش‌گرا</li>
+                <li>برنامه‌نویسی سمت کاربر و سرور</li>
+                <li>بهینه‌سازی سرعت و سئو</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="card">
+            <h2>تماس با من</h2>
+            <form>
+                <input type="text" placeholder="نام شما" required>
+                <input type="email" placeholder="ایمیل شما" required>
+                <textarea rows="4" placeholder="پیام شما" required></textarea>
+                <button type="submit">ارسال پیام</button>
+            </form>
+            <div class="social">
+                <a href="#" title="اینستاگرام">📷</a>
+                <a href="#" title="تلگرام">💬</a>
+                <a href="#" title="لینکدین">💼</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 تمامی حقوق محفوظ است.</p>
+    </footer>
+
+</body>
+</html>
